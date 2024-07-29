@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Work Sans';
+    font-size: 16px;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url('/faq-accordion-main/assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    line-height: 1.5;  
+    color: hsl(292, 42%, 14%);  
+}
+
+.faqs-conteiner{
+    background-color:hsl(0, 0%, 100%);
+    padding: 2.5rem;
+    border-radius: 10px;
+    width: 38rem;
+}
+
+.faqs-heading{
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.question-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+}
+
+.question{
+    font-weight: 600;
+}
+
+.answer.active{
+    display: block;
+    color: hsl(292, 16%, 49%);
+    padding-bottom: 1.5rem; 
+    transition: 5s ease;
+}
+
+.answer{
+    display: none;    
+}
+
+.bottom-line{
+    border-bottom: 1px solid  hsl(292, 16%, 49%,0.1);
+}
+
+button{
+    border: none;    
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn.hidden{
+    display: none;
+}
+
+.btn:active{
+    transform: scale(.98);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media(max-width: 640px){
+    body{
+        background-image: url('/faq-accordion-main/assets/images/background-pattern-mobile.svg');
+    }
+    .faqs-conteiner{
+        width: 90vw;
+    }
+    .faqs-heading{        
+        font-size: 1.2rem;
+    }
+}
